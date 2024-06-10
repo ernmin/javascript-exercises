@@ -1,13 +1,37 @@
-const add = function() {
+const add = function(num1, num2, ...restofnums) {
+  let add = 0;
+  add = num1 + num2;
+  if (restofnums.length !== 0){
+    for (const num in restofnums){
+      add += num;
+    }
+  }
+  return add;
 	
 };
 
-const subtract = function() {
+const subtract = function(num3, num4) {
+  let subtraction = 0;
+  if (num3 > num4){
+    subtraction = num3 - num4;
+  }
+  else {
+    subtraction = num4 - num3;
+  }
+  return subtraction;
 	
 };
 
-const sum = function() {
-	
+const sum = function(arr1) {
+  if (arr1.length === 0){
+      return 0;
+  }
+  let sum = 0;
+  for (let num in arr1){
+      sum += parseInt(arr1[num]);
+  }
+  return sum;
+      
 };
 
 const multiply = function() {
