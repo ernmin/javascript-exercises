@@ -34,11 +34,18 @@ const sum = function(arr1) {
       
 };
 
-const multiply = function() {
+const multiply = function(arrToMultiply) {
+  let product = 1;
+  if (arrToMultiply.length !== 0){
+    for (const num in arrToMultiply){
+      product *= parseInt(arrToMultiply[num]);
+    }
+  }
+  return product;
+}
 
-};
-
-const power = function() {
+const power = function(base, exponent) {
+  return base ** exponent;
 	
 };
 
