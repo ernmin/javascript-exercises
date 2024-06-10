@@ -1,15 +1,20 @@
 const removeFromArray = function(arr1, ...passInArg) {
-    // const arg = Array.from(passInArg);
+    const arg = Array.from(passInArg);
     const newArr = [];
-    for (const arg of passInArg){
-        //let j = 1; j < arg.length - 1; j++){
-        for (let i = 0; i < arr1.length; i++){
-            if (arr1[i] === arg){
-                continue;
+    for (let i = 0; i < arr1.length; i++){
+        for (let j = 0; j < arg.length; j++){
+        // for (const arg of passInArg){
+            if (arr1[i] === arg[j]){
+                // newArr.push(arr1[i]);
+                break;
             }
-            else {
+            else if (arr1[i] !== arg[j] && j === arg.length - 1){
                 newArr.push(arr1[i]);
             }
+            else if (j !== arg.length - 1){
+                continue;
+            }
+
         }
     }
     return newArr;
