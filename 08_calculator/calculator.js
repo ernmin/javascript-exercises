@@ -49,7 +49,18 @@ const power = function(base, exponent) {
 	
 };
 
-const factorial = function() {
+const factorial = function(calcFactorial) {
+  if (calcFactorial === 0){
+    return 1;
+  }
+
+  else {
+    let result = 1;
+    for (let i = 1; i < calcFactorial + 1; i++){
+      result = result * i; 
+    }
+    return result;
+  }
 	
 };
 
